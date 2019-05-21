@@ -7,9 +7,12 @@ Video demonstration here : __[Tello drone and computer vision: selfie air stick]
 
 Warning : this is just my exploration of a few computer vision techniques that can be used with a Tello drone. I did it for the fun and didn't try to make a finalized, well packaged product. So sorry for the non-optimized code and the lack of comments :-) 
 
-Tested only on Ubuntu 18.04
+Tested only on Ubuntu 18.04. **You need a powerful nvidia GPU to run Openpose fast enough.** A GTX 1080Ti was used here. Probably, a less powerful GPU can also work, but you will get a lower "frames/second" and will need to tune the PID controller parameters.
 
 ## Libraries and packages
+
+### OpenCV, pynput, pygame : 
+Mainly used for the UI (display windows, read keyboard events, play sounds). Any recent version should work.
 
 ### Openpose :
 I use the official release https://github.com/CMU-Perceptual-Computing-Lab/openpose
@@ -29,6 +32,8 @@ https://github.com/m-lundberg/simple-pid
 Used here to control the yaw, pitch, rolling and throttle of the drone. 
 
 The parameters of the PIDs may depend on the processing speed and need tuning to adapt to the FPS you can get. For instance, if the PID that controls the yaw works well at 20 frames/sec, it may yield oscillating yaw at 10 frames/sec.  
+
+
 
 ## Files of the repository
 
