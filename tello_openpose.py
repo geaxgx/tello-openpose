@@ -18,7 +18,7 @@ import argparse
 from math import pi, atan2
 from OP import *
 from math import atan2, degrees, sqrt
-from simple_pid import PID
+from simple-pid import PID
 from  multiprocessing import Process, Pipe, sharedctypes
 from FPS import FPS
 from CameraMorse import CameraMorse, RollingGraph
